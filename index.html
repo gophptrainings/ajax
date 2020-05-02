@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>CRUD Operation Using AJAX</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	  <script src="js/ajax.js"></script>
+	  <style>
+		#update{display:none;}
+	  </style>
+	</head>
+	<body>
+
+		<div class="container">
+			<h1>Employee Crud Operation By using AJAX</h1>
+			<div class="row">
+			<div id="success_msg"></div>
+				<div class="col-md-4">
+					<h3 id="action_title">Add Employee</h3>
+					
+					<form method="POST" action="" id="myform" onsubmit="saveData()">
+						
+						<div class="form-group">
+							<label>Employee Name:</label>
+							<input type="text" id="ename" class="form-control">
+						</div>
+						
+						<div class="form-group">
+							<label>Employee Mobile:</label>
+							<input type="text" id="mobile" class="form-control">
+						</div>
+						
+						<div class="form-group">
+							<label>Employee Salary:</label>
+							<input type="text" id="salary" class="form-control">
+						</div>
+						
+						<div class="form-group">
+							<label>Designation:</label>
+							<select id="desg" class="form-control">
+								<option value="">--Select Designation--</option>
+								<option value="Developer">Developer</option>
+								<option value="Designer">Designer</option>
+							</select>
+						</div>
+						
+						<div class="form-group">
+							<input id="save"  type="submit" value="Save" class="btn btn-primary">
+							<input type="button" id="cancel" value="Cancel" class="btn btn-default">
+						</div>
+						
+					</form>
+				</div>
+				<div class="col-md-8">
+					<h3>View Employees</h3>
+					<table class="table" id="empinfo">
+						
+					</table>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
